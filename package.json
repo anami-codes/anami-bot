@@ -1,7 +1,7 @@
 {
-  "name": "femdevs-bot",
+  "name": "anami-bot",
   "version": "1.0.0",
-  "description": "Proyecto de bot para el server de Discord de FemDevs",
+  "description": "Proyecto de bot para un servidor de Discord",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,17 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anami-codes/femdevs-discord-bot.git"
+    "url": "git+https://github.com/anami-codes/anami-discord-bot.git"
   },
   "author": "Anami",
   "license": "ISC",
   "dependencies": {
     "ascii-table": "0.0.9",
     "common-tags": "^1.8.0",
-    "discord.js": "^12.3.1",
-    "moment": "^2.28.0",
+    "discord.js": "^12.5.3",
+    "fs-extra": "^10.0.0",
+    "moment": "^2.29.1",
     "ms": "^2.1.2",
-    "sequelize": "^6.3.5",
-    "sqlite3": "^5.0.0"
+    "sequelize": "^6.6.2",
+    "sqlite3": "^5.0.2"
   }
 }

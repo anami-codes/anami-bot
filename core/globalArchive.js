@@ -1,10 +1,19 @@
 // Modules
 const Discord = require( 'discord.js' );
-const { readdirSync } = require('fs');
+const { readdirSync } = require('fs-extra');
 const asciiTable = require('ascii-table');
+const Sequelize = require( 'sequelize' );
 
 // JS Files
 const functions = require( './functions.js' );
+
+// Enums
+const DBAction = {
+	ADD: 'Add',
+	DELETE: 'Delete',
+	MODIFY: 'Modify',
+	READ: 'Read',
+};
 
 // Archives
 const commands	= [];
@@ -12,6 +21,11 @@ const DBs		= {};
 const scripts	= {};
 const jsons		= {};
 const cooldowns	= {};
+
+const DBConfig = new Sequelize({
+	dialect: 'sqlite',
+	storage: '/../../anami-bot.db',
+});
 
 /**
  * @param {Discord.Client} bot
@@ -23,7 +37,7 @@ function init( bot )
 	initDBs();
 }
 
-module.exports = { init, functions, DBs, scripts, jsons, cooldowns };
+module.exports = { init, functions, DBs, scripts, jsons, cooldowns, DBAction, DBConfig };
 
 // Variables
 const table = new asciiTable('Commands');

@@ -24,7 +24,7 @@ const cooldowns	= {};
 
 const DBConfig = new Sequelize({
 	dialect: 'sqlite',
-	storage: '/../../anami-bot.db',
+	storage: 'anami-bot.db',
 });
 
 /**

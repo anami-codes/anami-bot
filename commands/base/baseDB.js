@@ -11,7 +11,7 @@ const DBConfig = globalAchive.DBConfig;
  */
 function init()
 {
-	ChannelDB.sync( { force: true } );
+	ChannelDB.sync();
 }
 
 /**
